@@ -22,7 +22,7 @@ const SimilarProductItem = props => {
   return (
     <li className="item-container">
       <img className="image" src={imageUrl} alt={`similar product ${title}`} />
-      <p className="product-title">{title}</p>
+      <h1 className="product-title">{title}</h1>
       <p className="brand">{`by ${brand}`}</p>
       <div className="price-rating-container">
         <p className="price">{`RS ${price}/-`}</p>

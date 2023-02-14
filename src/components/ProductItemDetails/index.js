@@ -26,9 +26,13 @@ class ProductItemDetails extends Component {
   }
 
   onclickDash = () => {
-    this.setState(prevState => ({
-      quantity: prevState.quantity - 1,
-    }))
+    const {quantity} = this.state
+
+    if (quantity > 1) {
+      this.setState(prevState => ({
+        quantity: prevState.quantity - 1,
+      }))
+    }
   }
 
   onclickPlus = () => {
@@ -87,7 +91,7 @@ class ProductItemDetails extends Component {
         <div className="item-details-container">
           <img className="product-img" src={imageUrl} alt="product" />
           <div className="content-container">
-            <p className="title">{title}</p>
+            <h1 className="title">{title}</h1>
             <p className="price">{`RS ${price}`}</p>
             <div className="rating-review-container">
               <div className="rating-container">
